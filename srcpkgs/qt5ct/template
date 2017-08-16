@@ -1,0 +1,19 @@
+# Template file for 'qt5ct'
+pkgname="qt5ct"
+version=0.33
+revision=1
+only_for_archs="x86_64"
+build_style=qmake
+hostmakedepends="qt5-qmake"
+makedepends="qt5-devel qt5-svg-devel qt5-tools-devel"
+depends="qt5 qt5-svg"
+short_desc="Configuration tool for Qt5 applications"
+maintainer="PeridotGemTech <PeridotGemTech@protonmail.com>"
+license="BSD"
+homepage="https://sourceforge.net/projects/qt5ct/"
+distfiles="$SOURCEFORGE_SITE/qt5ct/qt5ct-$version.tar.bz2"
+checksum="2e55484bdae7988ec8ce2629cfc252b226df8b07b2a0b6f8ee2fd10cc8e7c02f"
+
+post_install() {
+	vlicense COPYING LICENSE
+}
